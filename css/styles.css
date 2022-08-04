@@ -119,6 +119,10 @@ button {
   width: 16px;
   height: 12px;
 }
+.auth-nav .icon:hover,
+.auth-nav .icon:focus {
+  fill: var(--accent-color);
+}
 
 .auth-nav .link:hover,
 .auth-nav .link:focus {
@@ -287,16 +291,17 @@ button {
   border: 1px solid #afb1b8;
   border-radius: 4px;
 }
+.clients-thumb:hover,
+.clients-thumb:focus {
+  fill: var(--accent-color);
+}
 
 .clients-icon {
   margin: 16px 32px;
   width: 106px;
   height: 60px;
 }
-.clients-thumb:hover,
-.clients-thumb:focus {
-  color: var(--accent-color);
-}
+
 .clients .item + .item {
   margin-left: 30px;
 }
