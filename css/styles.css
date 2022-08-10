@@ -113,13 +113,14 @@ button {
   text-decoration: none;
   letter-spacing: 0.02em;
 }
-/* .link-icon {
+.link-icon {
   fill: #757575;
-} */
+}
 
 .auth-nav .link:hover,
 .auth-nav .link:focus {
   color: var(--accent-color);
+  fill: var(--accent-color);
 }
 
 /* hero */
@@ -131,6 +132,22 @@ button {
   margin-bottom: 0;
   padding-top: 200px;
   padding-bottom: 200px;
+}
+.overlay {
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/Iherofon.jpg);
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .hero-title {
   margin-top: 0;
@@ -144,6 +161,7 @@ button {
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
+
 /* button */
 .button-main {
   display: inline-block;
@@ -210,15 +228,12 @@ button {
 .feature .item + .item {
   margin-left: 30px;
 }
-.feature-icon {
-  margin: 25px 102.34px;
-  width: 65.32px;
-  height: 70px;
-}
+
 .feature-thumb {
   display: inline-block;
   margin-bottom: 30px;
   width: 270px;
+  height: 120px;
   border-radius: 4px;
   background-color: var(--secondary-background-color);
 }
@@ -252,7 +267,7 @@ button {
   text-align: center;
 
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 16px;
 }
 
 .team-list {
@@ -262,27 +277,41 @@ button {
 }
 .team-list .item {
   width: 270px;
+  height: 428px;
   background-color: #fff;
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
 }
-/* .social-link {
-  border-radius: ellipse;
-  background-color: var(--accent-color);
-} */
+.team-social {
+  display: flex;
+  width: 206px;
+  height: 44px;
+  margin-top: 0;
+  margin-bottom: 30px;
+  margin-left: 32px;
+  margin-right: 32px;
+}
 .social-link {
+  display: inline-block;
   width: 44px;
   height: 44px;
-  border: 1px solid #fff;
   border-radius: 50%;
-  fill: #afb1b8;
+  color: #afb1b8;
+  background-color: var(--white-color);
+}
+.team-icon {
+  fill: currentColor;
 }
 .social-link:hover,
 .social-link:focus {
-  fill: #fff;
-  background-color: #2196f3;
+  background-color: var(--accent-color);
 }
+.team-icon:hover,
+.team-icon:focus {
+  fill: var(--white-color);
+}
+
 .team .item + .item {
   margin-left: 30px;
 }
@@ -295,21 +324,18 @@ button {
   display: flex;
 }
 .clients-thumb {
-  padding: 16px 32px;
   display: inline-block;
   width: 170px;
+  height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
   fill: #afb1b8;
 }
-.clients-icon {
-  /* margin: 16px 32px; */
-  width: 106px;
-  height: 60px;
-}
+
 .clients-thumb:hover,
 .clients-thumb:focus {
   fill: var(--accent-color);
+  border: 1px solid #2196f3;
 }
 .clients .item + .item {
   margin-left: 30px;
@@ -342,6 +368,8 @@ button {
 .button-type:focus {
   background-color: var(--accent-color);
   color: var(--white-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* work-list */
@@ -425,4 +453,32 @@ button {
 }
 .nav .item:last-child {
   margin-bottom: 0;
+}
+.footer-social {
+  display: flex;
+}
+.footer-text {
+  color: var(--white-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+.footer-thumb {
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: var(--white-color);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.footer-icon {
+  fill: currentColor;
+}
+.footer-thumb:hover,
+.footer-thumb:focus {
+  background-color: var(--accent-color);
+}
+.footer-container {
+  margin: 72px 878px 100px 516px;
 }
