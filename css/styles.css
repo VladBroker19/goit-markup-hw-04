@@ -6,6 +6,10 @@
 /* акцент #2196F3 */
 /* вторичный цвет фона #F5F4FA */
 /* текст футера rgba(255, 255, 255, 0.6); */
+/* основной цвет иконок  #afb1b8*/
+/* цвет фона иконок футера rgba(255, 255, 255, 0.1)  */
+/* цвет линии хедера #ececec */
+/* цвет рамки карточек порьфолто #eeeeee  */
 :root {
   --primary-text-color: #757575;
   --title-text-color: #212121;
@@ -14,6 +18,10 @@
   --secondary-background-color: #f5f4fa;
   --footer-background-color: #2f303a;
   --footer-text-color: rgba(255, 255, 255, 0.6);
+  --main-icon-color: #afb1b8;
+  --footer-iconfon-color: rgba(255, 255, 255, 0.1);
+  --border-header-color: #ececec;
+  --border-portfoliocard-color: #eeeeee;
 }
 .page {
   background-color: var(--white-color);
@@ -31,6 +39,7 @@
 figure {
   margin: 0;
 }
+
 button {
   padding: 0;
 }
@@ -40,7 +49,7 @@ button {
 }
 /* шапка */
 .page-header {
-  border-bottom: 1px solid #ececec;
+  border-bottom: 1px solid var(--border-header-color);
 }
 .main-nav {
   display: flex;
@@ -106,15 +115,16 @@ button {
   margin-left: 50px;
 }
 .auth-nav .link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   color: var(--primary-text-color);
+  fill: var(--primary-text-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   text-decoration: none;
   letter-spacing: 0.02em;
-}
-.link-icon {
-  fill: #757575;
 }
 
 .auth-nav .link:hover,
@@ -132,10 +142,8 @@ button {
   margin-bottom: 0;
   padding-top: 200px;
   padding-bottom: 200px;
-}
-.overlay {
+
   max-width: 1600px;
-  height: 600px;
   margin-left: auto;
   margin-right: auto;
   background-image: linear-gradient(
@@ -230,7 +238,6 @@ button {
 }
 
 .feature-thumb {
-  display: inline-block;
   margin-bottom: 30px;
   width: 270px;
   height: 120px;
@@ -278,31 +285,31 @@ button {
 .team-list .item {
   width: 270px;
   height: 428px;
-  background-color: #fff;
+  background-color: var(--white-color);
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
 }
-.team-social {
-  display: flex;
-  width: 206px;
-  height: 44px;
-  margin-top: 0;
-  margin-bottom: 30px;
-  margin-left: 32px;
-  margin-right: 32px;
+
+.card {
+  padding-left: 32px;
+  padding-right: 32px;
 }
 .social-link {
-  display: inline-block;
+  display: inline-flex;
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  color: #afb1b8;
+  color: var(--main-icon-color);
   background-color: var(--white-color);
+}
+.social-link:nth-child(4n + 1) {
+  margin-right: 10px;
 }
 .team-icon {
   fill: currentColor;
 }
+
 .social-link:hover,
 .social-link:focus {
   background-color: var(--accent-color);
@@ -327,15 +334,15 @@ button {
   display: inline-block;
   width: 170px;
   height: 92px;
-  border: 1px solid #afb1b8;
+  border: 1px solid var(--main-icon-color);
   border-radius: 4px;
-  fill: #afb1b8;
+  fill: var(--main-icon-color);
 }
 
 .clients-thumb:hover,
 .clients-thumb:focus {
   fill: var(--accent-color);
-  border: 1px solid #2196f3;
+  border: 1px solid var(--accent-color);
 }
 .clients .item + .item {
   margin-left: 30px;
@@ -388,6 +395,10 @@ button {
   margin-right: 30px;
   margin-bottom: 30px;
 }
+.work-list .item:hover {
+  box-shadow: 1px 4px 6px 0 rgba(0, 0, 0, 0.16), 0 4px 4px 0 rgba(0, 0, 0, 0.06),
+    0 1px 1px 0 rgba(0, 0, 0, 0.12);
+}
 
 .work-list .item:nth-child(3n) {
   margin-right: 0;
@@ -419,9 +430,9 @@ button {
 .box {
   padding-top: 20px;
   padding-bottom: 20px;
-  border-left: 1px solid #eeeeee;
-  border-right: 1px solid #eeeeee;
-  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid var(--border-portfoliocard-color);
+  border-right: 1px solid var(--border-portfoliocard-color);
+  border-bottom: 1px solid var(--border-portfoliocard-color);
 }
 /* footer */
 .footer-site {
@@ -434,6 +445,8 @@ button {
 }
 
 .nav {
+  display: flex;
+  align-items: center;
   margin-top: 20px;
 
   color: var(--white-color);
@@ -456,6 +469,7 @@ button {
 }
 .footer-social {
   display: flex;
+  margin-left: 70px;
 }
 .footer-text {
   color: var(--white-color);
@@ -465,12 +479,12 @@ button {
   text-transform: uppercase;
 }
 .footer-thumb {
-  display: inline-block;
+  display: inline-flex;
   width: 44px;
   height: 44px;
   border-radius: 50%;
   color: var(--white-color);
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--footer-iconfon-color);
 }
 .footer-icon {
   fill: currentColor;
