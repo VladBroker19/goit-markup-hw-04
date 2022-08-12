@@ -385,8 +385,6 @@ button {
   flex-wrap: wrap;
   margin-bottom: 94px;
 
-  font-size: 16px;
-  line-height: 1.88;
   letter-spacing: 0.06em;
 }
 
@@ -443,10 +441,10 @@ button {
 .footer-site .logo-link {
   color: var(--white-color);
 }
-
-.nav {
+.main-footer {
   display: flex;
-  align-items: center;
+}
+.nav {
   margin-top: 20px;
 
   color: var(--white-color);
@@ -467,11 +465,15 @@ button {
 .nav .item:last-child {
   margin-bottom: 0;
 }
-.footer-social {
-  display: flex;
+.social {
+  display: inline-block;
   margin-left: 70px;
 }
+.footer-social {
+  display: flex;
+}
 .footer-text {
+  margin-bottom: 20px;
   color: var(--white-color);
   font-weight: 700;
   font-size: 14px;
@@ -479,6 +481,8 @@ button {
   text-transform: uppercase;
 }
 .footer-thumb {
+  margin-top: 0;
+  margin-right: 10px;
   display: inline-flex;
   width: 44px;
   height: 44px;
@@ -492,7 +496,4 @@ button {
 .footer-thumb:hover,
 .footer-thumb:focus {
   background-color: var(--accent-color);
-}
-.footer-container {
-  margin: 72px 878px 100px 516px;
 }
